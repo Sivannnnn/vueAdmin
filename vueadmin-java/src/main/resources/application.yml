@@ -1,0 +1,26 @@
+server:
+#  前端已经占用8080端口了
+  port: 8081
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vueadmin?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  # 配置redis端口号
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  # 配置spring security默认账号密码
+#  security:
+#    user:
+#      name: user
+#      password: 123456
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+sivan:
+  jwt:
+    header: Authorization
+    expire: 604800 #7天，秒单位
+    secret: df5d5fdqwdf4jk1wer278w7er8tsx2c1
